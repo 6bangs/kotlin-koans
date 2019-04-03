@@ -8,7 +8,7 @@ data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparab
     ).compare(this, other)
 }
 
-operator fun MyDate.rangeTo(other: MyDate): DateRange = todoTask27()
+operator fun MyDate.rangeTo(other: MyDate) = DateRange(this, other)
 
 enum class TimeInterval {
     DAY,
@@ -16,4 +16,4 @@ enum class TimeInterval {
     YEAR
 }
 
-class DateRange(val start: MyDate, val endInclusive: MyDate)
+class DateRange(override val start: MyDate, override val endInclusive: MyDate) : ClosedRange<MyDate>
