@@ -7,8 +7,10 @@ import i_introduction._7_Nullable_Types.N07NullableTypesKtTest
 import i_introduction._8_Smart_Casts.N08SmartCastsKtTest
 import ii_collections.N24ExtensionsOnCollectionsKtTest
 import org.junit.Assert.assertTrue
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class AdditionalTest {
     @Test fun test() {
         invokeTests(
